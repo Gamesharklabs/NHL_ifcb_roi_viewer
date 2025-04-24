@@ -23,8 +23,7 @@ tabs = st.tabs(["🔍 ROI Viewer", "📊 cnn Classification Summary"])
 
 # ROI VIEWER TAB
 with tabs[0]:
-   folder = st.text_input("📂 Enter or paste full path to folder containing .roi files:", value="data")
-
+    folder = st.text_input("📂 Enter or paste full path to folder containing .roi files:", value="data")
     if os.path.isdir(folder):
         roi_files = sorted([f for f in os.listdir(folder) if f.endswith('.roi')])
         if not roi_files:
